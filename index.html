@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>news homepage challenge</title>
+        <!-- css file -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- normlize file -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,900;1,200;1,500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- start header-->
+        <div class="header">
+            <div class="container">
+                <div class="rowflex">
+                    <!-- logo -->
+                    <div class="logo">
+                        <a href=""><img src="images/logo.svg" alt="logo"></a>
+                    </div>
+                    <!-- menu -->
+                    <div class="bars" id="bars" onclick="shownav()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- navbar -->
+                    <div class="navbar" id="nav">
+                        <span class="close" onclick="hidenav()">x</span>
+                        <ul>
+                            <li><a href="">home</a></li>
+                            <li><a href="">new</a></li>
+                            <li><a href="">popular</a></li>
+                            <li><a href="">trending</a></li>
+                            <li><a href="">categories</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header-->
+        <!-- start new-news -->
+        <div class="new-news">
+            <div class="container">
+                <div class="rowflex">
+                    <!-- main news -->
+                    <div class="main-news">
+                        <a href=""><img src="images/image-web-3-desktop.jpg" alt=""></a>
+                        <div class="rowflex">
+                            <div class="mn-title">
+                                <a href="">
+                                    <h3>The Bright Future of Web 3.0?</h3>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>
+                                    We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+                                    But is it really fulfilling its promise?
+                                </p>
+                                <a href="" class="readmore">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- less important news -->
+                    <div class="less-i-news">
+                        <h4>New</h4>
+                        <ul>
+                            <li>
+                                <a href="" class="lin-link">Hydrogen VS Electric Cars</a>
+                                <p>will hydrogen-fueled cars ever catch up to EVs?</p>
+                            </li>
+                            <li>
+                                <a href="" class="lin-link">The Downsides of AI Artistry</a>
+                                <p>What are the possible adverse effects of on-demand AI image generation?</p>
+                            </li>
+                            <li>
+                                <a href="" class="lin-link">Is VC Funding Drying Up?</a>
+                                <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end new-news-->
+        <!-- start news-->
+        <div class="news">
+            <div class="container">
+                <div class="rowflex">
+                    <div class="col">
+                        <img src="images/image-retro-pcs.jpg" alt="">
+                        <div class="info rowflex">
+                            <span>01</span>
+                            <a href="" class="news-link">Reviving Retro PCs</a>
+                            <p>What happens when old PCs are given modern upgrades?</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/image-top-laptops.jpg" alt="">
+                        <div class="info rowflex">
+                            <span>02</span>
+                            <a href="" class="news-link">Top 10 Laptops of 2022</a>
+                            <p>Our best picks for various needs and budgets.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/image-gaming-growth.jpg" alt="">
+                        <div class="info rowflex">
+                            <span>03</span>
+                            <a href="" class="news-link">the Growth of Gaming</a>
+                            <p>How the pandemic has sparked fresh opportunities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end news-->
+        <!-- start footer -->
+        <div class="footer">
+            design by <a href="">Abdelrahman Zakaria</a> 
+        </div>
+        <!-- end footer -->
+        <!-- start java script -->
+        <script>
+            function shownav() {
+                document.getElementById('nav').style.cssText='display:block';
+            }
+            function hidenav() {
+                document.getElementById('nav').style.cssText='display:none';
+            }
+        </script>
+        <!-- end java script -->
+    </body>
+</html>

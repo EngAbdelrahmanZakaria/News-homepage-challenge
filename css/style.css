@@ -1,0 +1,320 @@
+/* start global */
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "worl sans", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.container {
+    padding: 20px 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width:1200) {
+    .container {
+        width: 1170;
+    }
+}
+.rowflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* end global */
+/* start var */
+:root {
+    --main-color: #9a9a9c;
+    --second-color: #ff9fa6;
+    --third-color: #e9a64a;
+    --fifth-color: #00001a;
+    --sixth-color: #5d5d77;
+}
+/* end var */
+/* start header */
+.header {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+.bars {
+    border: 2px solid #7a7878;
+    padding: 10px;
+    border-radius: 9px;
+    display: none;
+    cursor: pointer;
+}
+
+.bars span {
+    width: 30px;
+    height: 2px;
+    background: #000;
+    display: block;
+}
+.bars span:nth-child(2) {
+    margin: 5px 0;
+}
+.header .navbar li {
+    float: left;
+    list-style: none;
+    margin-left: 25px;
+}
+.header .navbar li a {
+    text-decoration: none;
+    font-size: 15px;text-transform: capitalize;
+    color: var(--main-color);
+}
+.header .navbar li a:hover {
+    color: var(--second-color);
+}
+.close {
+    display: none;
+}
+@media (max-width:992px) {
+    .header .bars {
+        display: block;
+    }
+    .bars:focus .navbar {
+        display: block !important;
+    }
+    .header .navbar {
+        display: none;
+        position: fixed;
+        background: #fff;
+        width: 100%;
+        right: 0;
+        padding: 20px;
+        top: 0;
+        height: 100vh;
+        z-index: 1;
+    }
+    .header .navbar ul {
+        margin: 0;
+        padding: 0;
+    } 
+    .header .navbar li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        margin: 10px 0;
+    }  
+    .close {
+        padding: 4px 14px 6px;
+        position: absolute;
+        font-size: 30px;
+        text-align: center;
+        margin: 15px 0 0;
+        color: var(--sixth-color);
+        border: 1px solid var(--sixth-color);
+        display: inline-block;
+        border-radius: 23%;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    .close:hover {
+        color: #fff;
+        border: 1px solid var(--second-color);
+        background-color: var(--second-color);
+    }
+
+}
+
+/* end header */
+/* start news */
+.new-news {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+.new-news .container {
+    padding: 0;
+}
+.new-news .rowflex {
+    align-items: flex-start;
+}
+.main-news {
+    width: 60%;
+    overflow: hidden;
+}
+.main-news img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.mn-title {
+    width: 45%;
+}
+.mn-title h3 {
+    font-size: 50px;
+    color: var(--fifth-color);
+    font-weight: 600;
+    margin: 0;
+}
+.mn-title h3:hover {
+    color: var(--third-color);
+}
+.main-news .info {
+    width: 45%;
+}
+.main-news .info p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.readmore {
+    background-color: var(--fifth-color);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 15px 30px;
+    display: inline-block;
+    transition: .3s;
+}
+.readmore:hover {
+    background-color: var(--third-color);
+}
+/* end news */
+/* start less important news */
+.less-i-news {
+    width: 38%;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    background-color: var(--fifth-color);
+    min-height: 436.5px;
+    padding: 20px 20px;
+}
+.less-i-news h4 {
+    color: var(--third-color);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    margin-top: 0;
+}
+.less-i-news ul {
+    padding: 0 20px;
+    margin: 0;
+}
+.less-i-news li {
+    margin-bottom: 30px;
+    width: 100%;
+}
+.less-i-news li:nth-child(1) {
+    border-bottom: 1px solid var(--sixth-color);
+}
+.less-i-news li:nth-child(2) {
+    border-bottom: 1px solid var(--sixth-color);
+}
+.less-i-news li a {
+    color: #fff;
+}
+.less-i-news li a:hover {
+    color: var(--third-color);
+}
+.less-i-news li p {
+    color: var(--sixth-color);
+}
+@media (max-width: 992px) {
+    .main-news {
+         width: 100%;
+        margin-bottom: 30px;
+    }
+    .less-i-news {
+        width: 100%;
+        min-height: auto;
+    }
+    .less-i-news h4 {
+        text-align: center;
+    }
+}
+/* end less important news */
+/* start news */
+.news {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+.news .col {
+    width: 32%;
+}
+.news .col img {
+width: 43%;
+height: 150px;
+}
+.news .col .info {
+    width: 50%;
+    float: right;
+    height: 150px;
+}
+.news .col .info span{
+    width: 100%;
+    font-size: 30px;
+    color: var(--main-color);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.news .col .info .news-link {
+    width: 100%;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--fifth-color);
+}
+.news .col .info .news-link:hover {
+    color: var(--second-color);
+}
+.news .col .info p {
+    width: 100%;
+    color: var(--main-color);
+    font-size: 12px;
+    line-height: 20px;
+}
+@media  (max-width: 992px) {
+    .news .col {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .news img {
+        width: 200px !important;
+        height: 200px !important;
+        display: block;
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+}
+/* end news */
+/* footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 0 20px 0;
+    font-size: 20px;
+    color: var(--main-color);
+}
+.footer a {
+    color: var(--second-color);
+}
